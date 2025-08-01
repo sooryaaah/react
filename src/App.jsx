@@ -4,7 +4,9 @@
 // import Events from "./Components/Events"
 // import UpdateName from "./Components/UpdateName"
 // import UseStateHook from "./Components/UseStateHook"
-import OnSubmitEvent from "./Components/OnSubmitEvent"
+// import OnSubmitEvent from "./Components/OnSubmitEvent"
+import React from "react"
+import ContactForm from "./Components/ContactForm"
 
 function App() {
  
@@ -17,7 +19,8 @@ function App() {
       {/* <Events/> */}
       {/* <UseStateHook/> */}
       {/* <UpdateName/> */}
-      <OnSubmitEvent/>
+      {/* <OnSubmitEvent/> */}
+      <ContactForm/>
     </>
   )
 }
