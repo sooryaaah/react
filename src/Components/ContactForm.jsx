@@ -36,9 +36,9 @@ const ContactForm = () => {
     {/* Form Panel - RIGHT */}
     <div className='w-1/2 p-10'>
       <form onSubmit={handleSubmit}>
-        <input onChange={(e) => setName(e.target.value)} type="text" placeholder='Name' className='w-full p-2 border rounded mb-4 shadow placeholder-pink-600' />   
-        <input onChange={(e) => setEmail(e.target.value)} type="text" placeholder='E-mail' className='w-full p-2 border rounded mb-4 shadow placeholder-pink-600' /> 
-        <input onChange={(e) => setPassword(e.target.value)} type="password" placeholder='Password' className='w-full p-2 border rounded mb-4 shadow placeholder-pink-600' />
+        <input required onChange={(e) => setName(e.target.value)} type="text" placeholder='Name' className='w-full p-2 border rounded mb-4 shadow placeholder-pink-600' />   
+        <input required onChange={(e) => setEmail(e.target.value)} type="text" placeholder='E-mail' className='w-full p-2 border rounded mb-4 shadow placeholder-pink-600' /> 
+        <input required onChange={(e) => setPassword(e.target.value)} type="password" placeholder='Password' className='w-full p-2 border rounded mb-4 shadow placeholder-pink-600' />
         <label className='text-pink-600 text-sm'>
           <input className='mr-2' type="checkbox" />I agree to the <a className='text-orange-500' href="#">terms and conditions</a>
         </label>
