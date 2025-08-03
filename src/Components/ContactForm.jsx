@@ -6,10 +6,21 @@ const ContactForm = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [alert, setAlert] = useState("");
 
     const handleSubmit = (e) => {
 
         e.preventDefault();
+
+        if(name.trim() === "" || email.trim() === "" || password.trim() === ""){
+          setAlert("Please fill out all the fields");
+          return;
+
+        }
+        setAlert("")
+
+
+
         const data = {
             name,
             email,
@@ -36,9 +47,15 @@ const ContactForm = () => {
     {/* Form Panel - RIGHT */}
     <div className='w-1/2 p-10'>
       <form onSubmit={handleSubmit}>
-        <input required onChange={(e) => setName(e.target.value)} type="text" placeholder='Name' className='w-full p-2 border rounded mb-4 shadow placeholder-pink-600' />   
-        <input required onChange={(e) => setEmail(e.target.value)} type="text" placeholder='E-mail' className='w-full p-2 border rounded mb-4 shadow placeholder-pink-600' /> 
-        <input required onChange={(e) => setPassword(e.target.value)} type="password" placeholder='Password' className='w-full p-2 border rounded mb-4 shadow placeholder-pink-600' />
+        <input onChange={(e) => setName(e.target.value)} type="text" placeholder='Name' className='w-full p-2 border rounded mb-4 shadow placeholder-pink-600' />   
+        <input onChange={(e) => setEmail(e.target.value)} type="text" placeholder='E-mail' className='w-full p-2 border rounded mb-4 shadow placeholder-pink-600' /> 
+        <input onChange={(e) => setPassword(e.target.value)} type="password" placeholder='Password' className='w-full p-2 border rounded mb-4 shadow placeholder-pink-600' />
+       
+       {alert && (
+        <div className='bg-red-100 text-red-700 px-4 py-2 rounded mb-4'>{alert}</div>
+       )}
+       
+       
         <label className='text-pink-600 text-sm'>
           <input className='mr-2' type="checkbox" />I agree to the <a className='text-orange-500' href="#">terms and conditions</a>
         </label>

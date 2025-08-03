@@ -7,8 +7,8 @@
 // import OnSubmitEvent from "./Components/OnSubmitEvent"
 import React from "react"
 // import UseEffectHook from "./Components/UseEffectHook"
-import FetchingDatas from "./Components/FetchingDatas"
-// import ContactForm from "./Components/ContactForm"
+// import FetchingDatas from "./Components/FetchingDatas"
+import ContactForm from "./Components/ContactForm"
 
 function App() {
 
@@ -22,9 +22,9 @@ function App() {
       {/* <UseStateHook/> */}
       {/* <UpdateName/> */}
       {/* <OnSubmitEvent/> */}
-      {/* <ContactForm/> */}
+      <ContactForm/>
       {/* <UseEffectHook /> */}
-      <FetchingDatas/>
+      {/* <FetchingDatas/> */}
     </>
   )
 }
